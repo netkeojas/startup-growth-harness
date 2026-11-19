@@ -21,3 +21,8 @@ without repeating topics already logged in `context/content_calendar.csv`.
 5. Run the full pipeline autonomously once triggered (e.g. via
    `/weekly-campaign`). Do not stop to ask clarifying questions mid-run —
    make reasonable judgment calls and note them in the draft/log instead.
+6. Dedupe against `context/content_calendar.csv` by **topic/title content,
+   not by date**. Running the pipeline more than once on the same date is
+   normal (e.g. a demo re-run) — never skip or refuse a run just because
+   today's date already has a row; only skip a topic if it would be a
+   near-duplicate of one already logged.
