@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#0B5D68"/>
+  <circle cx="1080" cy="80" r="140" fill="#083F47" opacity="0.4"/>
+  <rect x="60" y="60" width="150" height="36" rx="18" fill="#FF7D5C"/>
+  <text x="135" y="84" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">SAFETY</text>
+  <text x="60" y="284" font-family="system-ui, sans-serif" font-size="46" font-weight="800" fill="#FFFFFF"><tspan x="60" dy="0">Why AI Chatbot Toy</tspan><tspan x="60" dy="56">Safety Warnings Don't</tspan><tspan x="60" dy="56">Apply to Nuzzle</tspan></text>
+  <text x="60" y="610" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFE9A9">🐼 Nuzzle</text>
+</svg>

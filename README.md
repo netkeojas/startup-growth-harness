@@ -36,14 +36,19 @@ Inside the session:
 
 This spawns three sub-agents in sequence (`trend-scout` →
 `linkedin-creator` → `web-publisher`) and:
-- drops a new post + visual into `drafts/`
-- appends a new entry to `website/posts.js`
+- drops a drafted post + notes into `drafts/`
+- saves a real branded visual card into `website/assets/` (downloaded from
+  Canva if connected, otherwise an SVG fallback — either way it's a real
+  local file, not just a link)
+- appends a new entry (including that image) to `website/posts.js`
 - logs a new row in `context/content_calendar.csv`
 
-Just double-click `website/index.html` (or refresh it) to see the new card
-appear on the feed — no local server needed. The data is loaded via
-`<script src="posts.js">` rather than `fetch()`, specifically so this works
-straight from the filesystem (`file://`) for non-technical students too.
+Just double-click `website/index.html` (or refresh it) to see the new post
+— with its visual card — appear in the **Blog** section. No local server
+needed: the page is a small real site (hero, "how it works", then the
+agent-fed blog feed), and its data loads via `<script src="posts.js">`
+rather than `fetch()`, specifically so this works straight from the
+filesystem (`file://`) for non-technical students too.
 
 ## The guardrail demo
 
@@ -85,5 +90,5 @@ any file yourself in your own editor. To adapt this harness to your startup:
 | `.claude/hooks/guard_protected_files.py` | The actual code-level guardrail |
 | `.claude/commands/weekly-campaign.md` | The one slash command that runs the whole pipeline |
 | `context/` | Brand kit + content calendar (the agent's shared memory) |
-| `drafts/` | Generated LinkedIn posts + visual cards |
-| `website/` | The "live" startup site the pipeline publishes to |
+| `drafts/` | Generated LinkedIn post text + notes for each run |
+| `website/` | The real demo site: `index.html` (hero + how-it-works, protected), `posts.js` (the blog feed, agent-writable), `assets/` (downloaded/generated visual cards) |

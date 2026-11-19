@@ -13,6 +13,9 @@
       "WebFetch",
       "Bash(git:*)",
       "Bash(python3:*)",
+      "Bash(curl:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
       "mcp__canva__*"
     ]
   },
