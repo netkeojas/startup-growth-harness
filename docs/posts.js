@@ -26,5 +26,12 @@ window.NUZZLE_POSTS = [
     "summary": "U.S. PIRG's 2026 report found AI chatbot toy guardrails can weaken over time. Nuzzle runs on-device, with no chat to drift and nothing to leak.",
     "tag": "Safety",
     "image": "assets/2026-11-19-visual.svg"
+  },
+  {
+    "date": "2026-11-19",
+    "title": "The Unplugged Christmas: Why Half of Parents Are Cutting Tech Gifts This Year",
+    "summary": "A UK survey found 48% of parents plan fewer tech gifts this Christmas. Nuzzle is a screen-free soft toy built for connection, not screens.",
+    "tag": "Parenting",
+    "image": "assets/2026-11-19-unplugged-christmas-visual.svg"
   }
 ];
