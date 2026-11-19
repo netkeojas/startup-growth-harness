@@ -37,11 +37,13 @@ Inside the session:
 This spawns three sub-agents in sequence (`trend-scout` →
 `linkedin-creator` → `web-publisher`) and:
 - drops a new post + visual into `drafts/`
-- appends a new entry to `website/posts.json`
+- appends a new entry to `website/posts.js`
 - logs a new row in `context/content_calendar.csv`
 
-Open `website/index.html` in a browser (or refresh it) to see the new card
-appear on the feed.
+Just double-click `website/index.html` (or refresh it) to see the new card
+appear on the feed — no local server needed. The data is loaded via
+`<script src="posts.js">` rather than `fetch()`, specifically so this works
+straight from the filesystem (`file://`) for non-technical students too.
 
 ## The guardrail demo
 
@@ -70,7 +72,7 @@ any file yourself in your own editor. To adapt this harness to your startup:
 3. Add a guardrail of your own in `.claude/settings.json` or
    `.claude/skills/brand-voice/SKILL.md`.
 4. Run `/weekly-campaign` (or your own new slash command) and check
-   `drafts/` and `website/posts.json` for the output.
+   `drafts/` and `website/posts.js` for the output.
 
 ## Folder map
 

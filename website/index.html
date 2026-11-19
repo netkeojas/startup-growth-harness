@@ -72,16 +72,18 @@
     <p>Automatically updated by our Autonomous Growth Agent Harness.</p>
   </header>
   <div id="feed"></div>
+  <!-- posts.js (not fetch) so this page works by double-clicking it --
+       fetch() of a local .json file is blocked by browsers under file://. -->
+  <script src="posts.js"></script>
   <script>
-    fetch('posts.json').then(r => r.json()).then(posts => {
-      document.getElementById('feed').innerHTML = posts.reverse().map(p => `
-        <div class="card">
-          <div class="meta">${p.date} • <strong>${p.tag}</strong></div>
-          <h2>${p.title}</h2>
-          <p>${p.summary}</p>
-        </div>
-      `).join('');
-    });
+    const posts = (window.NUZZLE_POSTS || []).slice().reverse();
+    document.getElementById('feed').innerHTML = posts.map(p => `
+      <div class="card">
+        <div class="meta">${p.date} • <strong>${p.tag}</strong></div>
+        <h2>${p.title}</h2>
+        <p>${p.summary}</p>
+      </div>
+    `).join('');
   </script>
 </body>
 </html>
