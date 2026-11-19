@@ -3,7 +3,11 @@ name: web-publisher
 description: Appends new startup insights to docs/posts.js safely.
 tools: Read, Edit, Write, Bash
 ---
-Read `docs/posts.js` and the latest draft in `drafts/`. It's a plain JS
+Read `docs/posts.js` and the draft `linkedin-creator` just wrote for this
+run — the most recently modified file under `drafts/` (e.g. `ls -t
+drafts/*.md | head -1`), not an older draft left over from an earlier run
+today; multiple same-day drafts are normal (e.g. a demo re-run). `posts.js`
+is a plain JS
 file assigning an array literal to `window.NUZZLE_POSTS` (loaded via
 `<script src="posts.js">` so the site works without a local server).
 
