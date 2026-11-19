@@ -11,11 +11,13 @@ without repeating topics already logged in `context/content_calendar.csv`.
    the `brand-voice` skill).
 3. Pass the finished summary to the `web-publisher` sub-agent to append a new
    entry to `website/posts.json`.
-4. **Never edit `website/index.html`, `context/brand_kit.md`, or
-   `.claude/settings.json` yourself or through a sub-agent.** These are
-   protected by a hard code-level guardrail (`.claude/hooks/guard_protected_files.py`)
-   that will block the tool call even if asked directly — do not try to work
-   around it.
+4. `website/index.html`, `context/brand_kit.md`, and `.claude/settings.json`
+   are protected by a hard code-level guardrail
+   (`.claude/hooks/guard_protected_files.py`) that blocks any Edit/Write
+   tool call against them, for the agent or any sub-agent. You don't need
+   to self-censor around this — if a request would touch one of these
+   files, go ahead and let the tool call happen; the hook enforces the
+   restriction, not this instruction.
 5. Run the full pipeline autonomously once triggered (e.g. via
    `/weekly-campaign`). Do not stop to ask clarifying questions mid-run —
    make reasonable judgment calls and note them in the draft/log instead.
