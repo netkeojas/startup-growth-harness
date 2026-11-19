@@ -91,4 +91,4 @@ any file yourself in your own editor. To adapt this harness to your startup:
 | `.claude/commands/weekly-campaign.md` | The one slash command that runs the whole pipeline |
 | `context/` | Brand kit + content calendar (the agent's shared memory) |
 | `drafts/` | Generated LinkedIn post text + notes for each run |
-| `docs/` | The real demo site: `index.html` (hero + how-it-works, protected), `posts.js` (the blog feed, agent-writable), `assets/` (downloaded/generated visual cards) |
+| `docs/` | The real demo site, modeled on the live Nuzzle site: `index.html` (hero, how-it-works, features, research, CTA, then the Blog — protected), `posts.js` (the blog feed, agent-writable), `assets/` (downloaded/generated visual cards), `img/` (real Nuzzle brand photos) |
