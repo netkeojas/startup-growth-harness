@@ -2,20 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>GreenLedger AI — Startup Insights</title>
+  <title>Nuzzle — Parent Insights</title>
   <style>
-    body { font-family: system-ui, sans-serif; background: #F8FAFC; color: #0F172A; max-width: 820px; margin: 40px auto; padding: 0 20px; }
-    header { border-bottom: 2px solid #E2E8F0; padding-bottom: 20px; margin-bottom: 30px; }
-    .badge { background: #10B981; color: white; padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; }
-    .card { background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .meta { font-size: 13px; color: #64748B; margin-bottom: 8px; }
-    h2 { margin: 6px 0 10px; font-size: 20px; }
+    :root {
+      --bg: #F4F8F6;
+      --white: #FFFFFF;
+      --ink: #0F2A2E;
+      --muted: #4F6468;
+      --line: #D5E3E0;
+      --teal: #0B5D68;
+      --teal-deep: #083F47;
+      --coral: #FF7D5C;
+      --coral-soft: #FFD9CE;
+      --sun: #FFCF4D;
+      --sun-soft: #FFE9A9;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    header {
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .badge {
+      background: var(--coral);
+      color: var(--white);
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    header h1 {
+      color: var(--teal-deep);
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(15, 42, 46, 0.06);
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .meta strong {
+      color: var(--teal);
+    }
+    h2 {
+      margin: 6px 0 10px;
+      font-size: 20px;
+      color: var(--teal-deep);
+    }
   </style>
 </head>
 <body>
   <header>
-    <span class="badge">LIVE STARTUP FEED</span>
-    <h1>GreenLedger AI — Market Insights</h1>
+    <span class="badge">LIVE PARENT FEED</span>
+    <h1>Nuzzle — Language Learning Insights for Parents</h1>
     <p>Automatically updated by our Autonomous Growth Agent Harness.</p>
   </header>
   <div id="feed"></div>
