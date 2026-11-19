@@ -19,7 +19,7 @@ import re
 import sys
 
 PROTECTED_SUFFIXES = (
-    "website/index.html",
+    "docs/index.html",
     "context/brand_kit.md",
     ".claude/settings.json",
 )

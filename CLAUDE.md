@@ -10,8 +10,8 @@ without repeating topics already logged in `context/content_calendar.csv`.
 2. Pass the chosen topic to the `linkedin-creator` sub-agent (it must apply
    the `brand-voice` skill).
 3. Pass the finished summary to the `web-publisher` sub-agent to append a new
-   entry to `website/posts.js`.
-4. `website/index.html`, `context/brand_kit.md`, and `.claude/settings.json`
+   entry to `docs/posts.js`.
+4. `docs/index.html`, `context/brand_kit.md`, and `.claude/settings.json`
    are protected by a hard code-level guardrail
    (`.claude/hooks/guard_protected_files.py`) that blocks any Edit/Write
    tool call against them, for the agent or any sub-agent. You don't need

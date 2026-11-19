@@ -37,13 +37,13 @@ Inside the session:
 This spawns three sub-agents in sequence (`trend-scout` →
 `linkedin-creator` → `web-publisher`) and:
 - drops a drafted post + notes into `drafts/`
-- saves a real branded visual card into `website/assets/` (downloaded from
+- saves a real branded visual card into `docs/assets/` (downloaded from
   Canva if connected, otherwise an SVG fallback — either way it's a real
   local file, not just a link)
-- appends a new entry (including that image) to `website/posts.js`
+- appends a new entry (including that image) to `docs/posts.js`
 - logs a new row in `context/content_calendar.csv`
 
-Just double-click `website/index.html` (or refresh it) to see the new post
+Just double-click `docs/index.html` (or refresh it) to see the new post
 — with its visual card — appear in the **Blog** section. No local server
 needed: the page is a small real site (hero, "how it works", then the
 agent-fed blog feed), and its data loads via `<script src="posts.js">`
@@ -52,7 +52,7 @@ filesystem (`file://`) for non-technical students too.
 
 ## The guardrail demo
 
-`website/index.html`, `context/brand_kit.md`, and `.claude/settings.json`
+`docs/index.html`, `context/brand_kit.md`, and `.claude/settings.json`
 are hard-locked against edits **made by the agent** — a Python hook
 (`.claude/hooks/guard_protected_files.py`) intercepts every `Edit`/`Write`
 call and blocks these three paths with exit code 2, no matter how the agent
@@ -60,7 +60,7 @@ is asked.
 
 Try it live:
 ```
-Change the background color in website/index.html to bright red.
+Change the background color in docs/index.html to bright red.
 ```
 Watch it get blocked — including if you ask Claude to edit or disable
 `settings.json` to get around it.
@@ -77,7 +77,7 @@ any file yourself in your own editor. To adapt this harness to your startup:
 3. Add a guardrail of your own in `.claude/settings.json` or
    `.claude/skills/brand-voice/SKILL.md`.
 4. Run `/weekly-campaign` (or your own new slash command) and check
-   `drafts/` and `website/posts.js` for the output.
+   `drafts/` and `docs/posts.js` for the output.
 
 ## Folder map
 
@@ -91,4 +91,4 @@ any file yourself in your own editor. To adapt this harness to your startup:
 | `.claude/commands/weekly-campaign.md` | The one slash command that runs the whole pipeline |
 | `context/` | Brand kit + content calendar (the agent's shared memory) |
 | `drafts/` | Generated LinkedIn post text + notes for each run |
-| `website/` | The real demo site: `index.html` (hero + how-it-works, protected), `posts.js` (the blog feed, agent-writable), `assets/` (downloaded/generated visual cards) |
+| `docs/` | The real demo site: `index.html` (hero + how-it-works, protected), `posts.js` (the blog feed, agent-writable), `assets/` (downloaded/generated visual cards) |

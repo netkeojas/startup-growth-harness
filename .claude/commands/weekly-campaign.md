@@ -7,7 +7,7 @@ Run our weekly startup growth campaign:
    card in `drafts/` (use Canva MCP tools if available; otherwise generate a
    branded SVG card).
 4. Spawn `web-publisher` to append the new insight card to
-   `website/posts.js`.
+   `docs/posts.js`.
 5. Append today's date, the chosen topic, and status "Drafted" as a new row
    to `context/content_calendar.csv`.
 6. Report a short summary of what was created and where.
